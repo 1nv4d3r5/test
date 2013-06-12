@@ -1,9 +1,3 @@
-// TODO: Run this program in BlueJ. If you don't have
-// BlueJ installed yet, run it in the Udacity IDE. 
-// Paste the output in the text area.
-
-// BlueJ project directory: homework0
-
 public class Homework0
 {
     public static void main(String[] args)
@@ -26,3 +20,4 @@ public class Homework0
             Math.abs(ide.hashCode() % 10000));
     }
 }
+// This is a test
