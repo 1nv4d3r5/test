@@ -1,5 +1,5 @@
 test
 ========
 
-##Maintainers (Alphabetically)
+##Maintainer 
 * Suman Thapa
