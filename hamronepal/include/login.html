@@ -1,0 +1,84 @@
+<?php
+$con=mysql_connect("localhost","root","")or die("cannot connect");
+$db=mysql_select_db("form",$con)or  die("cannot select db");
+
+
+$firstname=$_POST['fname'];
+$lastname=$_POST['lname'];
+$address=$_POST['address'];
+$country=$_POST['country'];
+$phone=$_POST['phone'];
+$email=$_POST['email'];
+$gender=$_POST['male'];
+$uname=$_POST['uname'];
+$pass=$_POST['password'];
+
+$sql=mysql_query("insert into registration values('','$firstname','$lastname','$address','$country','$phone','$email','$gender','$uname','$pass')");
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body bgcolor="#2A3F00" text="#A0A0A4" > 
+<form action="#" method="post" name="form" >
+  <p><h1 align="center">Registration Page</h1>
+ </p>
+  <p>Firstname:
+    <input name="fname" type="text" id="fname" />
+  </p>
+  <p>Lastname:
+    <input name="lname" type="text" id="lname" />
+  </p>
+  <p>Address:
+    <input name="address" type="text" id="address" />
+  </p>
+  <p>Country:
+    <select name="country" id="country">
+      <option value="nepal">Nepal</option>
+      <option value="usa">USA</option>
+      <option value="china">CHina</option>
+      <option value="honkong">Honkong</option>
+      <option value="uk">UK</option>
+    </select>
+  </p>
+  <p>Phone:
+    <input name="phone" type="text" id="phone" />
+  </p>
+  <p>EMail:
+    <input name="email" type="text" id="email" />
+</p>
+  <p>Gender:
+    <input name="male" type="radio" value="male" />
+  Male 
+  <input name="male" type="radio" value="fmale" />
+  Female</p>
+  <p>Username:
+    <input name="uname" type="text" id="uname" />
+  </p>
+  <p>Password:
+    <input name="Pass" type="password" id="Pass" />
+  </p>
+  <p>
+    <input name="btnSubmit" type="submit" id="btnSubmit" value="Submit" />
+    <input type="reset" name="Reset" value="Cancel" />
+    <br />
+  </p>
+</form>
+
+</body>
+</html>
