@@ -1,0 +1,322 @@
+/* Free standard-compliant open source XHTML/CSS template provided by Eatlon.com */
+
+body {
+	background-image: url(images/body_bg.gif);
+	background-repeat: repeat-x;
+	background-color: #9faec2;
+	font-family: arial, sans-serif;
+	font-size: .7em;
+	color: #8f8f8f;
+	padding: 0;
+	margin: 0;
+}
+
+
+a { text-decoration: none; color: #6d819d; padding: 0; margin: 0; }
+a:hover, a.selected { text-decoration: none; color: #a42929; border-bottom: 1px solid #6d819d; outline: 0; padding: 0; margin: 0; }
+
+a.discrete { text-decoration: none; color: #7e7e7e; padding: 0; margin: 0; }
+a.discrete:hover { text-decoration: underline; color: #7e7e7e; border-bottom: 0; outline: 0; padding: 0; margin: 0; }
+
+a.title { text-decoration: none; color: #8f8f8f; padding: 0; margin: 0; }
+a.title:hover { text-decoration: none; color: #8f8f8f; border-bottom: 0; outline: 0; padding: 0; margin: 0; }
+
+h1 {
+	font-family: georgia, serif;
+	font-size: 1.5em;
+/*	font-weight: 100; */
+	padding: 0;
+	margin: 0;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: 100;
+	padding: 0;
+	margin: 8px 0;
+}
+
+h3 {
+	font-family: georgia, serif;
+	font-size: 1.2em;
+	font-weight: 100;
+	line-height: 1em;
+	border-bottom: 1px solid #e0e0e0;
+	padding: 0;
+	margin: 8px 0 5px 0;
+}
+
+h4 {
+	font-size: 1.2em;
+	font-weight: 100;
+	padding: 0;
+	margin: 8px 0;
+}
+
+textarea {
+	width: 95%;
+}
+
+.in { text-indent: 20px; }
+
+#wrap {
+	width: 876px;
+	min-height: 450px;
+	height: auto !important;
+	height: 450px;
+	background-color: #fff;
+	padding: 0;
+	margin: 0 auto;
+}
+
+#header {
+	width: 100%;
+	height: 140px;
+	background-image: url(images/head_bg.gif);
+	background-repeat: repeat-x;
+	background-position: top center;
+}
+#header h1 {
+	font-family: georgia, serif;
+	font-size: 5em;
+	font-weight: 100;
+	padding: 0;
+	margin: 0;
+}
+
+	.title_tagline {
+		width: 95%;
+		height: 140px;
+		background-image: url(images/banner.gif);
+		background-repeat: no-repeat;
+		background-position: top right;
+		padding: 30px 0 0 30px;
+		margin: 0;	
+	}
+
+
+#menu {
+	height: 60px;
+	background-image: url(images/menu_bg.gif);
+	background-repeat: repeat-x;
+	font-size: 1.1em;
+	padding: 11px 0 0 22px;
+	margin: 0;
+}
+
+#menu a { text-decoration: none; color: #fafafa; font-weight: bold; padding: 0; margin: 0; }
+#menu a:hover, #menu li a.selected { text-decoration: none; color: #d0d0d0; outline: 0; padding: 0; margin: 0; }
+
+	#menu ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	#menu ul li {
+		float: left;
+		padding: 0 0 0 0;
+		margin: 0 10px 0 10px;
+	}
+
+
+#content {
+	background-color: #fff;
+	margin: 10px 0 0 0;
+	padding: 0 18px 0 20px;
+}
+
+/* The following CSS,
+	"submenu_a",
+	"right_wrap",
+	"content_middle" and
+	"submenu_b"
+define the double submenus layout for index.html */
+
+	.submenu_a {
+		float: left;
+		width: 15%;
+		padding: 0;
+		margin: 0 0 0 10px;
+	}
+
+		.submenu_a p {
+			padding: 0;
+			margin: 6px 0 0 0;
+		}
+
+		.submenu_a ul {
+			list-style-type: none;
+			padding-left: 0;
+			margin: 5px 0 25px 0;
+		}
+
+		.submenu_a ul li {
+			padding: 0;
+			margin: 0;
+		}
+
+	.right_wrap {
+		float: right;
+		width: 80%;
+		padding: 0 24px 0 0;
+	}
+
+		.content_middle {
+			float: left;
+			width: 65%;
+			font-size: 1.1em;
+			line-height: 1.5em;
+			text-align: justify;
+			padding: 0 30px 0 25px;
+			margin: 0 1px 0 19px;
+			border-left: 1px solid #e0e0e0;
+			border-right: 1px solid #e0e0e0;
+		}
+
+			.content_middle p {
+				padding: 0;
+				margin: 7px 0 0 0;
+			}
+
+		.submenu_b {
+			float: right;
+			width: 18%;
+			padding: 0 9px 0 0;
+			margin: 0;
+		}
+
+			.submenu_b p {
+				padding: 0;
+				margin: 6px 0 0 0;
+			}
+
+			.submenu_b ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 5px 0 25px 0;
+			}
+
+			.submenu_b ul li {
+				padding: 0;
+				margin: 0;
+			}
+
+/* The following CSS,
+	"menu_left" and
+	"content_right"
+define the left-wing layout for index.html */
+
+	.menu_left {
+		float: left;
+		width: 16%;
+		padding: 0;
+		margin: 0 0 0 10px;
+	}
+
+		.menu_left p {
+			padding: 0;
+			margin: 6px 0 0 0;
+		}
+
+		.menu_left ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 5px 0 25px 0;
+		}
+
+		.menu_left ul li {
+			padding: 0;
+			margin: 0;
+		}
+
+	.content_right {
+		float: right;
+		width: 75%;
+		font-size: 1.1em;
+		line-height: 1.5em;
+		text-align: justify;
+		padding: 0 20px 0 25px;
+		margin: 0;
+		border-left: 1px solid #e0e0e0;
+	}
+
+		.content_right p {
+			padding: 0;
+			margin: 7px 0 0 0;
+		}
+
+/* The following CSS,
+	"content_left" and
+	"menu_right"
+define the right-wing layout for right_wing.html */
+
+	.content_left {
+		float: left;
+		width: 74%;
+		font-size: 1.1em;
+		line-height: 1.5em;
+		text-align: justify;
+		padding: 0 25px 0 10px;
+		margin: 0;
+		border-right: 1px solid #e0e0e0;
+	}
+
+		.content_left p {
+			padding: 0;
+			margin: 7px 0 0 0;
+		}
+
+	.menu_right {
+		float: right;
+		width: 16%;
+		padding: 0 20px 0 0;
+		margin: 0;
+	}
+
+		.menu_right p {
+			padding: 0;
+			margin: 6px 0 0 0;
+		}
+
+		.menu_right ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 5px 0 25px 0;
+		}
+
+		.menu_right ul li {
+			padding: 0;
+			margin: 0;
+		}
+
+
+.square {
+	width: 120px;
+	border-top: 1px solid #bcc6d4;
+	border-bottom: 1px solid #bcc6d4;
+	padding: 5px 8px 5px 0;
+	margin: 0 0 25px 0;
+}
+
+.post { padding: 0 0 20px 0; }
+
+.layouts { text-align: center; padding: 10px 0 0 0; }
+
+#bottom {
+	clear: both;
+	width: 100%;
+	height: 163px;
+	background-image: url(images/bottom_bg.gif);
+	background-repeat: no-repeat;
+	padding: 0;
+	margin: 0 auto;
+}
+
+	.footer {
+		width: 100%;
+		text-align: center;
+		padding: 20px 0 0 0;
+		margin: 0;
+	}

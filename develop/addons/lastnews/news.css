@@ -1,0 +1,89 @@
+/* Classes for the news module */
+
+#LNEnews {
+/*background: #9090ff; */
+	line-height: 1.1em;
+	margin: 0 5% 0 5%;
+	padding-top: 1em;
+	padding-bottom: .8em;
+}
+#LNEnews hr {
+	width: 80%;
+	margin: auto;
+}
+
+.LNEnews_title {
+	display: block;
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.LNEnews_date {
+	font-size: 80%;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.LNEnews_text {
+	display: block;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.LNEnews_text p {
+	margin-bottom: .1em;
+	margin-top: 0;
+}
+
+.LNEnews_author {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.LNEnews_email {
+	font-size: .9em;
+}
+
+.LNEnews_comments {
+/*	width: 85%; */
+	margin: 12px auto 0 auto;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.LNEnews_comment {
+/*	width: 85%; */
+	margin: 6px auto 6px;
+	background: #f0f0f0;
+	color: #303030;
+	padding: 4px 10px 4px 10px;
+}
+
+.LNEnews_comment .delete {
+	float: left;
+	border: none;
+	background: none;
+	margin-right: 4px;
+	padding: 0;
+}
+
+.LNEnews_comment .time {
+	display: inline;
+	font-size: .8em;
+}
+
+.LNEnews_comment .text {
+	display: block;
+	margin-bottom: 6px;
+}
+
+.LNEnews_comment .email {
+	margin-left: 12px;
+	font-size: .8em;
+}
+
+.LNEnews_comment .author {
+	font-weight: bold;
+}
+

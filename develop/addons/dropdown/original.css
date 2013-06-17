@@ -1,0 +1,25 @@
+<style type="text/css">
+/* ================================================================ 
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/ul-dropdown.html
+Copyright (c) 2005-2009 Stu Nicholls. All rights reserved.
+This stylesheet and the associated (x)html may be modified in any 
+way to fit your requirements.
+=================================================================== 
+*/
+ a, a:visited, a:hover, a:active, a:focus {direction:ltr; outline:0;}
+#dropdown {background:%1%; height:28px; font:normal 12px/28px arial, verdana, sans-serif; width:720px; margin:0 auto;}
+#dropdown ul {margin:0; padding:0; list-style:none; display:inline-block;}
+#dropdown .menu .level1-li {float:left; display:inline; width:120px; margin-top:-32000px;}
+#dropdown .menu a {display:block; width:120px; text-decoration:none; text-align:center; color:%4%;}
+#dropdown .menu a.level1-a {position:relative; float:left; display:inline; margin-right:-119px; margin-top:32000px;}
+#dropdown .menu .sub {background:#069; float:left; margin-top:-28px; padding-top:28px; margin-bottom:-32000px;}
+#dropdown .menu .sub a {background:#c90; position:relative; margin-right:-1px;}
+#dropdown .menu a:hover,
+#dropdown .menu a:focus,
+#dropdown .menu a:active {background:%2%; margin-right:0;}
+/*#dropdown .menu a.current {background:%3%; margin-right:0;} */
+#dropdown .menu a.current {background:%3%;}
+</style>

@@ -1,0 +1,1 @@
+<object type="application/x-shockwave-flash" data="dewplayer.swf?son=votre_son.mp3" width="200" height="20"> <param name="movie" value="dewplayer.swf?son=votre_son.mp3" /> </object>

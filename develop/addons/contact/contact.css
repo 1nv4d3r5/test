@@ -1,0 +1,33 @@
+/* Classes for contact form */
+#LNE_contact {
+	width: 95%;
+	margin: auto;
+}
+
+#LNE_contact form {
+	border: none;
+	background: transparent;
+}
+
+#LNE_contact fieldset {
+	background: transparent;
+	border: none;
+	margin-top: 20px;
+}
+
+#LNE_contact table  {
+	border: none;
+}
+
+#LNE_contactform p {
+	margin: 0;
+	padding: 0 0 6px 0;
+}
+
+#LNE_contactform textarea, #LNE_contactform input {
+	width: 400px;
+}
+
+#LNE_contactform textarea {
+	height:120px;
+}

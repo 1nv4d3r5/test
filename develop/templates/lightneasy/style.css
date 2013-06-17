@@ -1,0 +1,259 @@
+* {
+	margin: 0em;
+	padding: 0em;
+}
+
+h1,h2 {
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	color: #444;
+	background-color: #fff;
+}
+
+a {
+	color: #0077dd;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Outer */
+
+#outer {
+	padding: 0em;
+	margin: 0em;
+	width: 100%;
+}
+
+/* Header */
+
+#header {
+	position: relative;
+	background: #004778 url('images/topbg.png') bottom left repeat-x;
+	height: 145px;
+	padding-left: 2em;
+}
+
+#header img {
+	margin-top: 10px;
+	margin-left: 14px;
+}
+
+#header h1 {
+	position: absolute;
+	left: 250px;
+	top: 10px;
+	font-size: 2.4em;
+	letter-spacing: -0.05em;
+}
+
+#header h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header h2 {
+	position: absolute;
+	font-size: 1.2em;
+	left: 250px;
+	top: 50px;
+	color: #E0E8EF;
+}
+
+/* Menu */
+
+#menu {
+	position: absolute;
+	top: 78px;
+	right: 2em;
+	padding-left: 12px;
+	background: transparent url('images/m1.png') left no-repeat;
+}
+
+#menu div {
+	margin: 0;
+	padding: 0;
+	padding-right: 12px;
+	background: transparent url('images/m2.png') right no-repeat;
+}
+
+#menu ul {
+	list-style: none;
+/*	background: #1395CD; */
+	padding: 10px 0px 6px;
+	background: transparent url('images/m3.png') repeat-x;
+}
+
+#menu li {
+	display: inline;
+	padding-left: .8em;
+	padding-right: .8em;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+#menu li a:hover {
+	color: #d0f0ff;
+}
+
+#menu li a {
+	color: #ccc;
+	padding: 0.1em;
+	text-decoration: none;
+}
+
+#menu li a.selected {
+	color: #fff;
+}
+
+/* Content */
+
+#content {
+	line-height: 1.5em;
+	margin-top: -10px;
+}
+
+
+#content p {
+	margin-bottom: 1.5em;
+}
+
+#content h2,h3,h4,h5,h6 {
+	color: #545454;
+	margin-bottom: 1em;
+	border-bottom: dashed 1px #dfdfdf;
+	padding-bottom: 0.3em;
+}
+
+#content h2 {
+	font-size: 1.5em;
+}
+
+#content h3 {
+	font-size: 1.1em;
+}
+
+#content ul {
+	margin-bottom: 1.5em;
+	padding-left: 1em;
+	list-style: square;
+}
+
+#content blockquote {
+	margin-bottom: 1.5em;
+	padding: 0.75em 0.75em 0.75em 1.5em;
+	border-left: solid 0.75em #005082;
+	background: #FDFDFD url('images/a7.gif') top left repeat-x;
+}
+
+#content blockquote p {
+	margin-bottom: 0em;
+}
+
+#content table {
+	margin-bottom: 1.5em;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+#content table th {
+	font-weight: bold;
+	padding: 0.5em;
+}
+
+#content table td {
+	padding: 0.5em;
+	border-right: solid 1px #fff;
+}
+
+#content table tr.rowH {
+	color: #fff;
+	background: #006192 url('images/a8.gif') top left repeat-x;
+	border-right: solid 1px #fff;
+}
+
+#content table tr.rowA {
+	background: #F8F8F8 url('images/a6.gif') top left repeat-x;
+	border-top: solid 1px #fff;
+	color: inherit;
+}
+
+#content table tr.rowB {
+	background: #FDFDFD url('images/a7.gif') top left repeat-x;
+	border-top: solid 1px #fff;
+	color: inherit;
+}
+
+/* Primary Content */
+
+#primaryContentContainer {
+	background-color: #fff;
+	float: right;
+	margin: -10px -19em 0em -19em;
+	width: 100%;
+}
+
+#primaryContent {
+	margin: 1.5em 16.5em 0em 15.5em;
+	padding: 1.5em 3em 1.5em 3em;
+}
+
+/* Secondary Content */
+
+#secondaryContent {
+	position: relative;
+	float: left;
+	width: 14em;
+	padding: 3em 2em 1.5em 2em;
+/*	margin-top: -10px; */
+	background: #fff url('images/a1.gif') top right repeat-y;
+}
+
+#secondaryContent .xbg {
+	position: absolute;
+	right: 0em;
+	bottom: -64px;
+	background: #fff url('images/a3.gif') top right no-repeat;
+	height: 64px;
+	width: 128px;
+}
+
+/* Tertiary Content */
+
+#tertiaryContent {
+	position: relative;
+	float: right;
+	width: 15em;
+	padding: 3em 2em 1.5em 2em;
+/*	margin-top: -10px; */
+	background: #fff url('images/a2.gif') top left repeat-y;
+}
+
+#tertiaryContent .xbg {
+	position: absolute;
+	left: 0em;
+	bottom: -64px;
+	background: #fff url('images/a4.gif') top left no-repeat;
+	height: 64px;
+	width: 128px;
+}
+
+/* Footer */
+
+#footer {
+	position: relative;
+	z-index: 1;
+	border-top: dashed 1px #dfdfdf;
+	padding: 1em 0em 2em 0em;
+	margin: 1em 2em 0em 2em;
+	text-align: center;
+}
+
+.clear {
+	clear: both;
+}
