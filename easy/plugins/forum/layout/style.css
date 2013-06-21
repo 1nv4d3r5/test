@@ -1,0 +1,169 @@
+/*
+Layout scheme for forum plugin, version 3.2.1
+@ Fernando Baptista, 2010
+*/
+/*borders */
+
+/*Layout */
+#forumwrapper {
+	display: block;
+	border: 1px solid;
+	padding: 6px;
+	font-family: "Verdana", sans-serif;
+	font-size: 14px;
+	margin: 0 10;
+}
+
+#forumwrapper p, #forumwrapper h2, #forumwrapper h3 {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+#forumwrapper a {
+	text-decoration: none;
+}
+
+#forumwrapper a:hover {
+	color: #0000ff;
+}
+
+#forumtitle {
+	margin-bottom: 6px;
+	border: 1px solid;
+	text-decoration: none;
+}
+#forumwrapper h3 {
+	font-size: 1.2em;
+	text-align: center;
+	padding-top: 6px;
+	padding-bottom: 4px;
+}
+#forumform {
+	margin: 6px 0;
+	border: 1px solid;
+	background: #B0D0FF;
+	text-align: center;
+}
+#forumform form {
+	color: #000;
+	background: transparent;
+	padding-bottom: 4px;
+}
+textarea.foruminput, input.foruminput {
+	width: 90%;
+	margin: 0 2% 3px;
+}
+#forumform input.submit {
+	border: 1px solid;
+	padding: 1px;
+	margin: 0;
+}
+a.cancel {
+	border: 1px solid;
+	padding: 2px 3px;
+}
+#index {
+	padding: 0 4px 0 10px;
+}
+.indexright {
+	float: right;
+	width: 100px;
+	font-weight: 400;
+	text-align: right;
+}
+#forumtitles {
+	margin: 6px 0;
+	padding: 0px;
+}
+#forumtitles p {
+	margin-bottom: 4px;
+	padding: 2px 10px;
+	border: 1px solid;
+}
+#forumtitles p a {
+	font-size: 1.1em;
+	text-decoration: none;
+}
+.forumname {
+	margin-bottom: 4px;
+	font-weight: 600;
+	padding-left: 12px;
+}
+.backlink, .backlink a {
+	font-size: 0.8em;
+	font-weight: 400;
+	float: right;
+	padding-right: 10px;
+}
+.titleright {
+	float: right;
+	width: 70px;
+	font-size: 1em;
+	font-weight: 400;
+}
+#forumtopics {
+	margin-bottom: 6px;
+	padding-bottom: 4px;
+	border: 1px solid;
+}
+#forumposts {
+	margin-bottom: 6px;
+	padding-bottom: 4px;
+}
+
+#forumwrapper .topic {
+	margin-top: 6px;
+	margin-bottom: 6px;
+	border: 1px solid;
+}
+
+#forumwrapper .topictitle {
+	padding-top: 4px;
+	padding-left: 8px;
+	font-weight: 600;
+}
+
+.topictext {
+	padding: 0 8px 0;
+	font-size: 1em;
+}
+
+.quote {
+	margin: 6px 14px 0 14px;
+	padding: 4px;
+	border: 1px dotted;
+	background: #d0d0d0;
+}
+
+.topictext p {
+}
+
+.topicposter {
+	text-align: right;
+	font-size: 1em;
+	padding-right: 8px;
+}
+a.adelete {
+	width: 16px;
+	height: 16px;
+	padding: 0 4px 0 0;
+	margin: 0;
+	text-decoration: none;
+	border: none;
+}
+.deleteimg {
+	padding: 0;
+	margin: 0;
+	width: 16px;
+	height: 16px;
+	text-decoration: none;
+	border: none;
+}
+#forumfooter {
+	text-align: right;
+	margin-top: 6px;
+	border: 1px solid;
+	padding-right: 10px;
+	padding-top: 4px;
+}

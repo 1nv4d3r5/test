@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+	
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+	<url>
+
+	<loc>http://localhost/</loc>
+
+	<priority>0.6</priority>
+
+	<lastmod>2013-06-21</lastmod>
+
+	<changefreq>daily</changefreq>
+</url>
+<url>
+
+			<loc>http://localhost/easyindex.php</loc>
+
+			<priority>0.5</priority>
+
+			<lastmod>2013-06-21</lastmod>
+
+			<changefreq>daily</changefreq>
+
+			</url>
+<url>
+
+			<loc>http://localhost/easyabout-us.php</loc>
+
+			<priority>0.5</priority>
+
+			<lastmod>2013-06-21</lastmod>
+
+			<changefreq>daily</changefreq>
+
+			</url>
+<url>
+
+			<loc>http://localhost/easyadmissions.php</loc>
+
+			<priority>0.5</priority>
+
+			<lastmod>2013-06-21</lastmod>
+
+			<changefreq>daily</changefreq>
+
+			</url>
+<url>
+
+			<loc>http://localhost/easynews.php</loc>
+
+			<priority>0.5</priority>
+
+			<lastmod>2013-06-21</lastmod>
+
+			<changefreq>daily</changefreq>
+
+			</url>
+<url>
+
+			<loc>http://localhost/easycareer.php</loc>
+
+			<priority>0.5</priority>
+
+			<lastmod>2013-06-21</lastmod>
+
+			<changefreq>daily</changefreq>
+
+			</url>
+<url>
+
+			<loc>http://localhost/easygallery.php</loc>
+
+			<priority>0.5</priority>
+
+			<lastmod>2013-06-21</lastmod>
+
+			<changefreq>daily</changefreq>
+
+			</url>
+<url>
+
+			<loc>http://localhost/easycontact-us.php</loc>
+
+			<priority>0.5</priority>
+
+			<lastmod>2013-06-21</lastmod>
+
+			<changefreq>daily</changefreq>
+
+			</url>
+</urlset>

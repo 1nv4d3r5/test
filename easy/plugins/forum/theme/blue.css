@@ -1,0 +1,73 @@
+/*
+Blue color scheme for forum plugin, version 3.2.1
+@ Fernando Baptista, 2010
+*/
+
+/* Background colors: */
+#forumwrapper {
+	background: #f0f0f0;
+}
+
+#forumwrapper a {
+	background: transparent;
+}
+
+#forumtitle, #forumfooter, .topicposter {
+	background: #70B3F9;
+}
+
+#forumtitles p, .topictext, #forumtopics {
+	background: #b0d0ff;
+}
+
+#forumform {
+	background: #80c0ff;
+}
+#forumwrapper a.cancel, #forumform input.submit {
+	background: #eee;
+}
+textarea.foruminput, input.foruminput {
+	background: #eee;
+}
+#forumform {
+	background: #B0D0FF;
+}
+#forumform form {
+	background: transparent;
+}
+
+/* text colors */
+#forumform input.submit:hover {
+	color: #0000ff;
+}
+#forumtitles a {
+	color: #800000;
+}
+#forumtitles a:hover, #forumwrapper a:hover {
+	color: #ff0000;
+}
+
+#forumwrapper {
+	color: #303030;
+}
+
+#forumwrapper a, #forumwrapper h3, #forumwrapper h2 {
+	color: #202030;
+}
+#forumwrapper a:hover {
+	color: #0000ff;
+}
+
+a.cancel, #forumform input.submit {
+	color: #000;
+}
+textarea.foruminput, input.foruminput {
+	color: #000;
+}
+#forumform form {
+	color: #000;
+}
+
+#index {
+	color: #000040;
+}

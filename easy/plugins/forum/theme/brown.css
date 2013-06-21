@@ -1,0 +1,95 @@
+/*
+Brown color scheme for forum plugin, version 3.2.1
+@ Fernando Baptista, 2010
+*/
+
+/* Background colors: */
+#forumwrapper {
+	background: #F4F2E0;
+}
+
+#forumwrapper a {
+	background: transparent;
+}
+
+#forumtitle, #forumfooter, .topicposter {
+	background: #401010;
+}
+
+#forumtitles p, .topictext, #forumtopics {
+	background: #E8E3D6;
+}
+
+#forumform {
+	background: #E8E3D6;
+}
+#forumwrapper a.cancel, #forumform input.submit {
+	background: #eee;
+}
+textarea.foruminput, input.foruminput {
+	background: #eee;
+}
+#forumform form {
+	background: transparent;
+}
+
+/* text colors */
+#forumwrapper {
+	color: #202020;
+}
+
+#forumwrapper h3, #forumwrapper h2 {
+	color: #a0a0a0;
+}
+
+#forumform input.submit:hover {
+	color: #0000ff;
+}
+
+#forumtitles a {
+	color: #402000;
+}
+
+#forumtitles a:hover {
+	color: #ff0000;
+}
+
+#forumwrapper a:hover {
+	color: #ff0000;
+}
+
+.topicposter {
+	color: #b0b0b0;
+}
+
+a.cancel, #forumform input.submit {
+	color: #000;
+}
+
+textarea.foruminput, input.foruminput {
+	color: #000;
+}
+
+#forumform form {
+	color: #000;
+}
+
+#forumwrapper a {
+	color: #402000;
+}
+
+#forumfooter a {
+	color: #a0a0a0;
+}
+
+.topictext a {
+	color: #80ff80;
+}
+
+#forumname.backlink a {
+	color: $000000;
+}
+
+#index {
+	color: #000040;
+}
