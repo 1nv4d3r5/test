@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+{% load flags %}
+{% load tz %}
+
+{% block title %}Arch Linux - Developer World Clocks{% endblock %}
+
+{% block head %}<link rel="stylesheet" type="text/css" href="{% static "flags/fam.css" %}" media="screen, projection" />{% endblock %}
+
+{% block content %}
+<div id="dev-clocks-box" class="box">
+    <h2>Developer World Clocks</h2>
+
+    <p>This page helps prevent you from waking a sleeping developer. It also
+    depends on developers keeping the time zone information up to date, so if
+    you see 'UTC' listed, pester them to update their settings.</p>
+    <p>The "Last Action" column shows the last time this developer has done
+    something we know about. Considered dates for each developer include:</p>
+    <ul>
+        <li>Build date of a package in the repositories</li>
+        <li>Last login to the developer side of this site</li>
+        <li>Admin log entry on this site (e.g., adding a donor, modifying a
+        mirror)</li>
+        <li>Post date of a news item</li>
+        <li>Signing off on a package</li>
+        <li>Flagging a package out-of-date</li>
+    </ul>
+    <p>
+    Current UTC Time: {{ utc_now|date:"Y-m-d H:i T" }}
+    </p>
+
+    <table id="clocks-table" class="results">
+        <thead>
+            <tr>
+                <th>Developer</th>
+                <th>Username</th>
+                <th>Alias</th>
+                <th>Last Action</th>
+                <th>Location</th>
+                <th>Time Zone</th>
+                <th>Current Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dev in developers %}
+            <tr class="{% cycle 'odd' 'even' %}">
+                <td><a href="mailto:{{ dev.email }}">{{ dev.get_full_name }}</a></td>
+                <td>{{ dev.username }}</td>
+                <td>{{ dev.userprofile.alias }}</td>
+                <td>{{ dev.last_action }}</td>
+                <td>{% country_flag dev.userprofile.country %}{{ dev.userprofile.location }}</td>
+                <td>{{ dev.userprofile.time_zone }}</td>
+                <td>{{ utc_now|timezone:dev.userprofile.time_zone|date:"Y-m-d H:i T" }}<span class="hide"> {{ dev.userprofile.time_zone }}</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+
+{% block script_block %}
+{% load cdn %}{% jquery %}{% jquery_tablesorter %}
+<script type="text/javascript" src="{% static "archweb.js" %}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#clocks-table:has(tbody tr)").tablesorter({
+        widgets: ['zebra'],
+        sortLocaleCompare: true,
+        sortList: [[0,0]],
+        headers: { 4: { sorter: false } }
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load cache %}
+{% load static from staticfiles %}
+{% load flags %}
+
+{% block title %}Arch Linux - Downloads{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static "flags/fam.css" %}" media="screen, projection" />
+<link rel="alternate" type="application/rss+xml" title="Arch Linux Releases" href="/feeds/releases/" />
+{% endblock %}
+
+{% block navbarclass %}anb-download{% endblock %}
+
+{% block content %}
+<div id="arch-downloads" class="box">
+
+    <h2>Arch Linux Downloads</h2>
+
+    <h3>Release Info</h3>
+
+    <p>The image can be burned to a CD, mounted as an ISO file,
+    or be directly written to a USB stick using a utility like `dd`. It
+    is intended for new installations only; an existing Arch Linux system
+    can always be updated with `pacman -Syu`.</p>
+
+    <ul>
+        {% if release.version %}<li><strong>Current Release:</strong> {{ release.version }}</li>{% endif %}
+        {% if release.kernel_version %}<li><strong>Included Kernel:</strong> {{ release.kernel_version }}</li>{% endif %}
+        {% if release.file_size %}<li><strong>ISO Size:</strong> {{ release.file_size|filesizeformat }}</li>{% endif %}
+        <li><a href="https://wiki.archlinux.org/index.php/Installation_Guide">Installation Guide</a></li>
+        <li><strong>Resources:</strong>
+            <ul>
+                <li><a href="https://bugs.archlinux.org/index.php?project=6"
+                    title="Arch Linux Bugtracker:Release Engineering">Bug Tracker</a></li>
+                <li><a href="https://mailman.archlinux.org/mailman/listinfo/arch-releng"
+                    title="Arch Linux Release Engineering mailing list">Mailing List</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    {% if release.info %}
+    <h3>Release Notes</h3>
+
+    <div class="article-content">{{ release.info_html }}</div>
+    {% endif %}
+
+    <h3>Existing Arch Users</h3>
+
+    <p>If you are an existing Arch user, there is no need to download a new ISO
+    to update your existing system. You may be looking for
+    <a href="{% url 'mirrorlist' %}">an updated mirrorlist</a> instead.</p>
+
+    <h3>BitTorrent Download (recommended)</h3>
+
+    <p>If you can spare the bytes, please leave the client open after your
+    download is finished, so you can seed it back to others.
+    <em>A web-seed capable client is recommended for fastest download speeds.</em></p>
+
+    {% if release %}<ul>
+        <li><a href="{{ release.magnet_uri }}"
+            title="Magnet link">Magnet link for {{ release.version }}</a></li>
+        <li><a href="{% url 'releng-release-torrent' release.version %}"
+            title="Download torrent">Torrent for {{ release.version }}</a></li>
+    </ul>{% endif %}
+
+    <h3>Netboot</h3>
+
+    <p>If you have a wired connection, you can boot the latest release directly over the network.</p>
+    <ul>
+        <li><a href="{{ releng_pxeboot_url }}"
+            title="Arch Linux Netboot Live System">Arch Linux Netboot</a></li>
+    </ul>
+
+    <h3>HTTP Direct Downloads</h3>
+
+    <p>In addition to the BitTorrent links above, install images can also be
+    downloaded via HTTP from the mirror sites listed below. Please
+    ensure the download image matches the checksum from the md5sums.txt or
+    sha1sums.txt file in the same directory as the image.</p>
+
+    <h4>Checksums</h4>
+
+    <p>File integrity checksums for the latest releases can be found below:</p>
+
+    <ul>
+        <li><a href="https://www.archlinux.org/{{ release.iso_url }}.sig"
+            title="PGP signature">PGP signature</a></li>
+        {% if release.md5_sum %}<li><strong>MD5:</strong> {{ release.md5_sum }}</li>{% endif %}
+        {% if release.sha1_sum %}<li><strong>SHA1:</strong> {{ release.sha1_sum }}</li>{% endif %}
+    </ul>
+
+    {% cache 600 download-mirrors %}
+    <div id="download-mirrors">
+        {% regroup mirror_urls by country as grouped_urls %}
+        {% for country in grouped_urls %}
+        {% if country.grouper %}<h5>{% country_flag country.grouper %}{{ country.grouper.name }}</h5>
+        {% else %}<h5>Worldwide</h5>{% endif %}
+        <ul>
+            {% for mirror_url in country.list %}
+            <li><a href="{{ mirror_url.url }}{{ release.dir_path }}"
+                title="Download from {{ mirror_url.url }}">{{ mirror_url.mirror.name }}</a></li>
+            {% endfor %}
+        </ul>
+        {% endfor %}
+    </div>
+    {% endcache %}
+
+    <p>If you want to become an Official Arch Linux Mirror please follow the
+    instructions listed <a href="https://wiki.archlinux.org/index.php/DeveloperWiki:NewMirrors">here</a>.</p>
+
+</div>
+{% endblock %}
