@@ -3,8 +3,7 @@ Public Class calculator
     Private isSubtracting As Boolean = False
     Private isDividing As Boolean = False
     Private isMultiplying As Boolean = False
-    Private isPower As Boolean = False
-    Private isPI As Boolean = False
+
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         If txtNum1.Text.Length <> 0 And txtNum2.Text.Length <> 0 And isAdding = False Then
@@ -67,17 +66,13 @@ Public Class calculator
     End Sub
 
     Private Sub btnPower_Click(sender As Object, e As EventArgs) Handles btnPower.Click
-        If txtNum1.Text.Length <> 0 And txtNum2.Text.Length <> 0 And isPower = False Then
+        If txtNum1.Text.Length <> 0 And txtNum2.Text.Length <> 0 Then
 
 
             Dim answer As Double = power(CType(txtNum1.Text, Double), CType(txtNum2.Text, Double))
             txtAnswer.Text = answer
             txtNum2.ReadOnly = True
-            isPower = True
 
-        ElseIf isPower Then
-            Dim answer As Double = power(CType(txtNum1.Text, Double), CType(txtNum2.Text, Double))
-            txtAnswer.Text = answer.ToString()
         Else
             MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
@@ -86,17 +81,17 @@ Public Class calculator
     End Sub
 
     Private Sub btnPI_Click(sender As Object, e As EventArgs) Handles btnPI.Click
-        If txtNum1.Text.Length <> 0 And txtNum2.Text.Length <> 0 And isPI = False Then
+        If txtNum1.Text.Length <> 0 Then
 
-            txtNum2.ReadOnly = True
-            Dim answer As Double = pi(CType(txtNum1.Text, Double))
-            txtAnswer.Text = answer
-            txtNum2.ReadOnly = True
-            isPI = True
 
-        ElseIf isPI Then
+
             Dim answer As Double = pi(CType(txtNum1.Text, Double))
-            txtAnswer.Text = answer.ToString()
+            txtAnswer.Text = String.Format("{0:n3}", answer)
+            txtNum2.Text = String.Format("{0:n3}", Math.PI)
+            txtNum2.ReadOnly = True
+
+
+
         Else
             MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
@@ -142,9 +137,15 @@ Public Class calculator
         isSubtracting = False
         isDividing = False
         isMultiplying = False
-        isPower = False
-        isPI = False
 
 
+    End Sub
+
+    Private Sub btnPI_MouseHover(sender As Object, e As EventArgs) Handles btnPI.MouseHover
+        tlTipPi.SetToolTip(btnPI, "Only one value is needed in the first value field")
+    End Sub
+
+    Private Sub calculator_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'tlTipPi.SetToolTip(btnPI, "Only one value is needed in the first value field")
     End Sub
 End Class
