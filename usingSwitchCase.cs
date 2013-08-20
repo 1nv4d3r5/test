@@ -60,3 +60,64 @@ namespace Our_First_Application
         }
     }
 }
+
+## My attempt!
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace usingSwitchCase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            #region "All the bullsh*ts go here"
+            String output,input,decision;
+
+            output = "What do you think I should say?";
+
+            Console.WriteLine(output);
+
+            input = Convert.ToString(Console.ReadLine());
+
+            Console.WriteLine("You said {0}\n", input);
+
+            #endregion
+
+            #region "Switch Case program starts here"
+
+            Console.WriteLine("What do you want to do? Please choose from the options given below : ");
+            Console.WriteLine("\n\n1.Beep\n2.What you said before!\n");
+ 
+            decision = Convert.ToString(Console.ReadLine());
+
+            switch(decision)
+            {
+                case "1":
+                    Console.Beep();
+                    break;
+                case "2":
+                    Console.WriteLine(output);
+                    input = Convert.ToString(Console.ReadLine());
+                    Console.WriteLine("You said {0}",input);
+                    break;
+
+                default:
+                    System.Environment.Exit(0);
+                    break;
+
+            }
+
+            Console.ReadLine();
+
+            #endregion
+
+        }
+    }
+}
+
