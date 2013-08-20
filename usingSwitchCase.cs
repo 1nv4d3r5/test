@@ -121,3 +121,73 @@ namespace usingSwitchCase
     }
 }
 
+
+## Version 1.03
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace WTFProgram
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String output, input, decision;
+
+            output = "What do you think I should say?";
+
+            Console.WriteLine(output);
+           
+            input = Convert.ToString(Console.ReadLine());
+
+            Console.WriteLine("You said {0}", input);
+
+            #region "Code for Switch Case statement"
+
+            Console.WriteLine("Choose your option:\n");
+            Console.WriteLine("\n\n1.Beep \n2.Repeat the question again?\n3.Give us your age,you motherfuckr");
+
+            decision = Convert.ToString(Console.ReadLine());
+
+            switch (decision)
+            { 
+                case "1":
+                    Console.Beep();
+                    break;
+                case "2":
+                    Console.WriteLine(output);
+                    input = Convert.ToString(Console.ReadLine());
+                    Console.WriteLine("You said {0}", input);
+                    break;
+                case "3":
+                    Console.Write("What's your age,motherfukr?");
+                    int age = Convert.ToInt32(Console.ReadLine());
+                    if (0 <= age && age <= 10)
+                        Console.WriteLine("Your still young to code,kid!");
+                    if (10 < age && age <= 30)
+                        Console.WriteLine("Good! You should learn to code!");
+                    if (30 < age && age <= 100)
+                        Console.WriteLine("WTF!! What'd you do learning to code?");
+                    if (age > 100)
+                        Console.WriteLine("100+?? Why are you even alive??");
+                    break;
+                default:
+                    System.Environment.Exit(0);
+                    break;
+            }
+
+            Console.ReadLine();
+
+
+            #endregion
+
+
+
+        }
+    }
+}
+
