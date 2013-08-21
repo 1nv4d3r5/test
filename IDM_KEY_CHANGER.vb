@@ -29,38 +29,29 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ' Dim changeValue As String
-
-        Dim fName As Object = TextBox1.Text
-        Dim lName As Object = TextBox2.Text
-        Dim eMail As Object = TextBox3.Text
-        Dim sErial As Object = TextBox4.Text
+   
 
 
 
 
-        'changeValue = My.Computer.Registry.SetValue _
         My.Computer.Registry.SetValue _
-                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "FName", fName)
-        ' TextBox1.Text = changeValue
+                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "FName", TextBox1.Text)
 
-        'changeValue = My.Computer.Registry.SetValue _
+
+
         My.Computer.Registry.SetValue _
-                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "LName", lName)
+                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "LName", TextBox2.Text)
 
-        'TextBox2.Text = changeValue
-
-        'changeValue = My.Computer.Registry.SetValue _
+       
         My.Computer.Registry.SetValue _
-                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "Email", eMail)
+                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "Email", TextBox3.Text)
 
-        'TextBox3.Text = changeValue
 
-        'changeValue = My.Computer.Registry.SetValue _
+
         My.Computer.Registry.SetValue _
-                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "Serial", sErial)
+                        ("HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Internet Download Manager", "Serial", TextBox4.Text)
 
-        'TextBox4.Text = changeValue
+
 
     End Sub
 End Class
