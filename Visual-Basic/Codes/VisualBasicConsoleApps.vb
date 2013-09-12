@@ -230,7 +230,7 @@ Module Module1
         Console.WriteLine("Hello, What is your name? ") 'Ask the user their name.
         userName = Console.ReadLine() 'Stores the users name.
         If userName = "Adam" Then
-            Console.WriteLine("Hello Smith!)
+            Console.WriteLine("Hello Smith!")
             Console.WriteLine("Thanks for creating this useful site")
             Console.ReadLine()
         Else
